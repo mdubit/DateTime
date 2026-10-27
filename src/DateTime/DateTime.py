@@ -44,10 +44,10 @@ def getDefaultDateFormat():
             default_datefmt = getConfiguration().datetime_format
             return default_datefmt
         except ImportError:
-             # No Zope configuration available (ie, outside Zope): cache the
-             # default, otherwise the failing import is retried (and sys.path
-             # rescanned) at every DateTime instantiation.
-             default_datefmt = 'us'
+            # No Zope configuration available (ie, outside Zope): cache the
+            # default, otherwise the failing import is retried (and sys.path
+            # rescanned) at every DateTime instantiation.
+            default_datefmt = 'us'
         except Exception:
             return 'us'
     else:

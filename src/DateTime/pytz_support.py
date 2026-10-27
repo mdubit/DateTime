@@ -260,6 +260,7 @@ class PytzCache:
     # Timezone objects are stateless: cache them per key, to avoid
     # re-resolving the pytz timezone at every _tzoffset call.
     _cache = {}
+
     def __getitem__(self, key):
         try:
             return self.cache[key]
